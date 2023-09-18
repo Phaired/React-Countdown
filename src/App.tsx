@@ -1,6 +1,7 @@
 import './App.css'
 import {useEffect, useState} from "react";
 import {Line} from "rc-progress";
+import {Tooltip} from "react-tooltip";
 
 function App() {
 
@@ -60,9 +61,10 @@ function App() {
                 <p>
                     Encore {d} {pluralize(d, 'jour')} {h} {pluralize(h, 'heure')} {m} {pluralize(m, 'minute')} {s} {pluralize(s, 'seconde')}.
                 </p>
-                <p>
+                <p className="end-date-date">
                     Nous finissons le 28 mars 2025 🥳🥳🥳
                 </p>
+                <Tooltip anchorSelect=".end-date-date" content="En vrai on termine le 5 septembre 2025" data-tooltip-variant="warning" />
                 <span style={{fontSize :"14px",
                                 display: "flex",
                                 alignItems: "center",
